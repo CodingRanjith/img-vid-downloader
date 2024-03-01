@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.search{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.search img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.search .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+
+.search h1{
+    font-size: 2.65rem;
+    font-weight: 600;
+    color: #111111;
+}
+.search p{
+    font-size: 1.5rem;
+    margin-top: 8px;
+}
+.search .search-box {
+    height: 55px;
+    margin: 45px 0;
+    position: relative;
+}
+
+input, button, i {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-box input {
+    width: 80%;
+    height: 100%;
+    font-size: 1.1rem;
+    padding-left: 55px;
+}
+
+@media (max-width: 576px) {
+    .search .search-box {
+        margin: 20px 0; /* Adjusted margin for smaller screens */
+    }
+}
+
+
+.search-btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.search-btn .img{
+    position: absolute;
+    padding: 10px;
+    cursor: pointer;
+    left: 110px;
+    border: none;
+}
+
+.search-btn .vid{
+    position: absolute;
+    padding: 10px;
+    bottom: 8px;
+    cursor: pointer;
+    right: 80px;
+    border: none;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery .images{
+    columns: 5 340px;
+    gap: 15px;
+    max-width: 95%;
+    margin-top: 40px;
+}
+.images img{
+    width: 100%;
+}
+.images .card{
+    list-style: none;
+    margin-bottom: 14px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+.images .card .details{
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    transition: bottom 0.1s ease;
+}
+.images .card:hover .details{
+    bottom: 0; 
+}
+.gallery .load-more{
+    margin: 50px 0;
+    font-size: 1.2rem;
+    background: #8a6cff;
+    padding: 12px 27px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.gallery .load-more .disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+ .photographer{
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+ .photographer i{
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+.details .photographer span{
+    font-size: 1.05rem;
+}
+.card .details button{
+    padding: 3px 8px;
+    font-size: 1.1rem;
+    background: #fff;
+    cursor: pointer;
+}
+
+.lightbox {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    display: none;
+}
+.lightbox.show{
+    display: block;
+}
+.lightbox .wrapper {
+    position: absolute;
+    left: 50%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 850px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.preveiw-img{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.wrapper .preveiw-img .img {
+    max-height: 70vh;
+    max-width: 90vh;
+}
+.preveiw-img .img img{
+    max-width: 100%;
+    object-fit: contain;
+    height: 100%;
+}
+.wrapper header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .photographer{
+    font-size: 1.7rem;
+}
+header .photographer span{
+    font-size: 1.2rem;
+}
+header .photographer{
+    color: #333;
+}
+header .buttons i{
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    display: inline-block;
+    font-size: 1.2rem;
+    background: #8a6cff;
+    color: #fff;
+    line-height: 40px;
+}
+.buttons i:last-child{
+    margin-left: 10px;
+    background: #6c757d;
+}
+#videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#videos-container div {
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#videos-container div h2 {
+    display: none;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+video {
+    width: 100%;
+    border-radius: 5px;
+}
+
+hr {
+    margin-top: 15px;
+    border: 0.5px solid #ced4da;
+}
+
+.gallery .load-more{
+    margin: 50px 0;
+    font-size: 1.2rem;
+    background: #8a6cff;
+    padding: 12px 27px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.gallery .load-more .disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* .video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.video-modal button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+} */
+
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.video-modal button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zenaxatexh Image & Video Downloader</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Icon Scout Link for Icon-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+<section class="search"><!--have to change-->
+    <img src="assets/img/bg.png" alt="search-img">
+    <div class="content">
+        <h1>Image & Video Downloader</h1>
+        <p>Search and download any images & videos</p>
+        <div class="search-box">
+            <input type="text" placeholder="Search Images & Videos">
+        </div>
+        <ul class="nav nav-tabs mt-3 search-btn" id="myTabs" role="tablist" style="border-bottom: 2px solid #dee2e6; justify-content: space-evenly;">
+            <li class="nav-item" role="presentation">
+                <button class="active btn btn-warning" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="true" style="font-weight: bold; color: #000;">Images</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="btn btn-info" id="notes-tab" data-bs-toggle="tab" data-bs-target="#notes" type="button" role="tab" aria-controls="notes" aria-selected="false" style="font-weight: bold; color: #000;">Video</button>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<div class="tab-content mt-3" id="myTabContent">
+    <!-- Summary tab -->
+    <div class="tab-pane fade show active" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+        <div class="lightbox">
+            <div class="wrapper">
+                <header>
+                    <div class="photographer">
+                        <i class="uil uil-camera"></i>
+                        <span></span>
+                    </div>
+                    <div class="buttons">
+                        <i class="uil uil-import"></i>
+                        <i class="uil uil-times"></i>
+                    </div>
+                </header>
+                <div class="preveiw-img">
+                    <div class="img"><img src="" alt="preveiw-img"></div>
+                </div>
+            </div>
+        </div>
+       <section class="gallery">    
+            <ul class="images"><!--have to change--></ul>
+            <button class="load-more">Load More</button>
+            <a href="https://www.pexels.com/search/color%3A%20red/" class=""></a>
+        </section>
+    </div>
+    <!-- Notes tab -->
+    <div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-tab">
+        <div id="videos-container"></div>
+        <section class="gallery">
+            <ul class="videos"></ul>
+            <button class="load-more">Load More</button>
+            <a href="https://www.pexels.com/search/color%3A%20red/" class=""></a>
+        </section>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
